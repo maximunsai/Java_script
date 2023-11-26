@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For_loop</title>
+</head>
+
+<body>
+
+    <p id="vowels"></p>
+    <p id="consonants"></p>
+
+    <script>
+        let text = "adkdoejueicbneuomsh";
+        let len = text.length;
+        let vowels = "";
+        let consonants = "";
+
+        for (let i = 0; i < len; i++) {
+            let currentChar = text[i];
+
+            if (currentChar.match(/[aeiou]/)) {
+                vowels += currentChar + "<br>";
+            } else if (!currentChar.match(/[aeiou]/)) {
+                consonants += currentChar + "<br>";
+            }
+        }
+
+        document.getElementById("vowels").innerHTML = "Vowels: " + "<br>" + vowels;
+        document.getElementById("consonants").innerHTML = "Consonants: " + "<br>" + consonants;
+    </script>
+
+</body>
+
+</html>
